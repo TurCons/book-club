@@ -1,10 +1,11 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,5 +21,21 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  let extraAssets = new Funnel('semantic/dist/themes', {
+    srcDir: '/',
+    include: ['**/*'],
+    destDir: '/assets/themes'
+  });
+
+  app.import({
+    development: 'vendor/semantic.css',
+    production: 'vendor/semantic.min.css'
+  });
+
+  app.import({
+    development: 'vendor/semantic.js',
+    production: 'vendor/semantic.min.js'
+  });
+
+  return app.toTree(extraAssets);
 };
