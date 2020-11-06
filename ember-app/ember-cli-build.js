@@ -5,7 +5,11 @@ const Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-
+    /*
+    lessOptions: {
+      paths: ['semantic']
+    }
+    */
   });
 
   // Use `app.import` to add additional libraries to the generated

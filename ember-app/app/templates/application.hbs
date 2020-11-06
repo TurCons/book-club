@@ -1,26 +1,46 @@
 
-<div class="ui attached stackable menu">
+<div class="ui attached top stackable inverted menu">
+  <img class="logo" src="assets/images/logo1.jpg">
   <div class="ui container">
     <a class="item">
-      <i class="home icon"></i> Home
+      <i class="home icon"></i> Домой
     </a>
     <a class="item">
-      <i class="grid layout icon"></i> Browse
+      <i class="book layout icon"></i> Книги
     </a>
     <a class="item">
-      <i class="mail icon"></i> Messages
+      <i class="male layout icon"></i> Докладчики
     </a>
+    <a class="item">
+      <i class="blogger layout icon"></i> Доклады
+    </a>
+    <a class="item">
+      <i class="mail layout icon"></i> Заявки
+    </a>
+
+    <div class="right item">
+      <div class="ui icon input"><input type="text" placeholder="Search..."></div>
+    </div>
+
     <div class="ui simple dropdown item">
-      More
+      Настройки
       <i class="dropdown icon"></i>
       <div class="menu">
-        <a class="item"><i class="edit icon"></i> Edit Profile</a>
-        <a class="item"><i class="globe icon"></i> Choose Language</a>
-        <a class="item"><i class="settings icon"></i> Account Settings</a>
+        <a class="item"><i class="edit icon"></i> Настройка 1</a>
+        <a class="item"><i class="globe icon"></i> Настройка 2</a>
+        <a class="item"><i class="settings icon"></i> Настройка 3</a>
       </div>
     </div>
-    <div class="right item">
-      <div class="ui input"><input type="text" placeholder="Search..."></div>
-    </div>
+
   </div>
 </div>
+
+  <div class="ui main sticky container content">
+    {{outlet}}
+  </div>
+
+<div class="ui inverted attached footer sticky fixed bottom segment">
+    <div class="ui center aligned container">
+      Книжный клуб
+    </div>
+  </div>
