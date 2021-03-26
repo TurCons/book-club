@@ -28,4 +28,9 @@ jobs:
         npm install
         ember build 
     
-    
+    - name: upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-without-markdown
+        path: dist
+        working-directory: ./ember-app/dist
