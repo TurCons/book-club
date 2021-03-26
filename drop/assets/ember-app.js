@@ -277,6 +277,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("ember-app/app")["default"].create({"name":"ember-app","version":"0.0.0+e83f8850"});
+  require("ember-app/app")["default"].create({"name":"ember-app","version":"0.0.0+af9079b1"});
 }
 //# sourceMappingURL=ember-app.map
